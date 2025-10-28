@@ -9,36 +9,42 @@
 <body>
     <div class="game-container">
         <h1>テトリス</h1>
-        <div class="info-container">
-            <div class="score-container">
-                <p>スコア</p>
-                <span id="score">0</span>
+        <div class="game-layout">
+            <div class="left-panel">
+                <canvas id="tetris" width="300" height="600"></canvas>
             </div>
-            <div class="level-container">
-                <p>レベル</p>
-                <span id="level">1</span>
-            </div>
-            <div class="lines-container">
-                <p>ライン</p>
-                <span id="lines">0</span>
+            <div class="right-panel">
+                <div class="info-container">
+                    <div class="score-container">
+                        <p>スコア</p>
+                        <span id="score">0</span>
+                    </div>
+                    <div class="level-container">
+                        <p>レベル</p>
+                        <span id="level">1</span>
+                    </div>
+                    <div class="lines-container">
+                        <p>ライン</p>
+                        <span id="lines">0</span>
+                    </div>
+                </div>
+                <div class="next-piece-container">
+                    <p>次のピース</p>
+                    <canvas id="next-piece" width="120" height="120"></canvas>
+                </div>
+                <div class="controls">
+                    <p>操作方法:</p>
+                    <ul>
+                        <li>← → : 移動</li>
+                        <li>↓ : 高速落下</li>
+                        <li>↑ / スペース: 回転</li>
+                        <li>P : 一時停止</li>
+                        <li>R : 再スタート</li>
+                    </ul>
+                </div>
+                <button id="start-button">スタート</button>
             </div>
         </div>
-        <canvas id="tetris" width="300" height="600"></canvas>
-        <div class="next-piece-container">
-            <p>次のピース</p>
-            <canvas id="next-piece" width="120" height="120"></canvas>
-        </div>
-        <div class="controls">
-            <p>操作方法:</p>
-            <ul>
-                <li>← → : 移動</li>
-                <li>↓ : 高速落下</li>
-                <li>↑ / スペース: 回転</li>
-                <li>P : 一時停止</li>
-                <li>R : 再スタート</li>
-            </ul>
-        </div>
-        <button id="start-button">スタート</button>
         <div id="game-over" class="game-over hidden">
             <h2>ゲームオーバー</h2>
             <p>最終スコア: <span id="final-score">0</span></p>
